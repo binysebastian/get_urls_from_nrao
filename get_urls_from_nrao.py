@@ -31,8 +31,9 @@ def get_soup(URL, filetype,imagetype='I'):
 def main():
     # Get the URL and mode from the command line arguments
     if len(sys.argv) != 4:
-        print("Usage: python get_urls_from_nrao.py <URL (e.g. https://archive-new.nrao.edu/vlass/se_continuum_imaging/VLASS2.1)> <mode>")
+        print("Usage: python get_urls_from_nrao.py <URL (e.g. https://archive-new.nrao.edu/vlass/se_continuum_imaging/VLASS2.1)> <mode> <imagetype>")
         print("  mode: 'w' for write or 'a' for append")
+        print("  imagetype: 'I' for total intensity images or 'alpha' for spectral index and error images")
         return
     URL = sys.argv[1]
     mode = sys.argv[2]
