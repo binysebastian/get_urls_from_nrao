@@ -5,8 +5,10 @@ The resulting output of this code can be used as an input for running the CIRADA
 
 The usage is as follows.
 ```python
-python get_urls_from_nrao.py <URL> <mode>
+python get_urls_from_nrao.py <URL> <mode> <imagetype>
 ```
 
 Here, an example for URL is https://archive-new.nrao.edu/vlass/se_continuum_imaging/VLASS2.1 .
 There are two modes, 'w' for write and 'a' for append.
+The two options for imagetype are 'alpha' for spectral index and corresponding error images and 'I' for total intensity images.
+The code generates an output file named "manifest.csv". In some cases where there are multiple folders, such as "VLASS2.1" and "VLASS2.2", it may be necessary to run the code a second time in "append mode". This will allow the code to add new entries to the existing "manifest.csv" file instead of overwriting it.
